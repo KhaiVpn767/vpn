@@ -91,27 +91,26 @@ chgck_pid(){
 while true $x != "ok"
 do
 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                 ⇱ TROJAN MENU ⇲                  \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-chck_pid
-echo -e "
-[\033[0;32m01\033[0m] • Create Trojan-GFW Account
-[\033[0;32m02\033[0m] • Deleting Trojan-GFW Account
-[\033[0;32m03\033[0m] • Extending Trojan-GFW Account Active Life
-[\033[0;32m04\033[0m] • Check User Login Trojan-GFW
-
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;30m                  TROJAN Menu              \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
+ chck_pid
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Create Trojan-GFW Account"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Deleting Trojan-GFW Account"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Extending Trojan-GFW Account Active Life"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Check User Login Trojan-GFW"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
 chgck_pid
-echo -e "
-[\033[0;32m05\033[0m] • Create Trojan-GO Account
-[\033[0;32m06\033[0m] • Deleting Trojan-GO Account
-[\033[0;32m07\033[0m] • Extending Trojan-GO Account Active Life
-[\033[0;32m08\033[0m] • Check User Login Trojan-GO
-
-[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Create Trojan-GO Account"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Deleting Trojan-GO Account"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Extending Trojan-GO Account Active Life"
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m Check User Login Trojan-GO"
+echo -e""
+echo -e "[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
 

@@ -95,23 +95,22 @@ chck_sshwb(){
 while true $x != "ok"
 do
 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                   ⇱ SSH MENU ⇲                   \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;30m                  SSH Menu                 \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
 menu_sts
 chck_sshwb
-echo -e "
-[\033[0;32m01\033[0m] • Create SSH & OpenVPN Account
-[\033[0;32m02\033[0m] • Extend SSH & OpenVPN Account Active Life
-[\033[0;32m03\033[0m] • Delete SSH & OpenVPN Account
-[\033[0;32m04\033[0m] • Check User Login SSH & OpenVPN
-[\033[0;32m05\033[0m] • List of Member SSH & OpenVPN
-[\033[0;32m06\033[0m] • Delete User Expired SSH & OpenVPN
-[\033[0;32m07\033[0m] • Displays Users Who Do Multi Login SSH
-[\033[0;32m08\033[0m] • Enable/Disable SSH Websocket $sts
-
-[00] • Kembali Ke Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
-echo ""
+echo -e ""
+echo -e " [\033[1;36m01\033[0m] •\e[0m\033[0;32m  Create SSH & OpenVPN Account"
+echo -e " [\033[1;36m02\033[0m] •\e[0m\033[0;32m  Extend SSH & OpenVPN Account Active Life"
+echo -e " [\033[1;36m03\033[0m] •\e[0m\033[0;32m  Delete SSH & OpenVPN Account"
+echo -e " [\033[1;36m04\033[0m] •\e[0m\033[0;32m  Check User Login SSH & OpenVPN"
+echo -e " [\033[1;36m05\033[0m] •\e[0m\033[0;32m  List of Member SSH & OpenVPN"
+echo -e " [\033[1;36m06\033[0m] •\e[0m\033[0;32m  Delete User Expired SSH & OpenVPN"
+echo -e " [\033[1;36m07\033[0m] •\e[0m\033[0;32m  Displays Users Who Do Multi Login SSH"
+echo -e " [\033[1;36m08\033[0m] •\e[0m\033[0;32m  Enable/Disable SSH Websocket $sts"
+echo -e""
+echo -e "[00] • Kembali Ke Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
