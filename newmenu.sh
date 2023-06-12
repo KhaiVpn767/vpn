@@ -66,6 +66,32 @@ Exp="\033[1;31mExpired\033[0m"
 rm -f /home/needupdate > /dev/null 2>&1
 else
 Exp=$(curl -sS https://raw.githubusercontent.com/KhaiVpn767/access/main/ip | grep $MYIP | awk '{print $3}')
+#Download/Upload today
+dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
+utoday="$(vnstat -i eth0 | grep "today" | awk '{print $5" "substr ($6, 1, 1)}')"
+ttoday="$(vnstat -i eth0 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}')"
+#Download/Upload yesterday
+dyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $2" "substr ($3, 1, 1)}')"
+uyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $5" "substr ($6, 1, 1)}')"
+tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}')"
+#Download/Upload current month
+dmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $3" "substr ($4, 1, 1)}')"
+umon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $6" "substr ($7, 1, 1)}')"
+tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}')"
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
+cpu_usage+=" %"
+uram=$(free -m | awk 'NR==2 {print $3}')
+fram=$(free -m | awk 'NR==2 {print $4}')
+uptime="$(uptime -p | cut -d " " -f 2-10)"
+IPVPS=$(curl -s ipinfo.io/ip )
+domain=$(cat /usr/local/etc/xray/domain)
+# TOTAL ACC CREATE OVPN SSH
+total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+# TOTAL ACC CREATE VMESS WS
+totalvm=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
+# TOTAL ACC CREATE  VLESS WS
+totalvl=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
 fi
 chck_b(){
 	PID=`ps -ef |grep -v grep | grep scvps_bot |awk '{print $2}'`
@@ -77,69 +103,82 @@ chck_b(){
 }
 chck_b
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m|              • SCRIPT VPS MENU •               |\E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+
+echo -e "\e[31m╒════════════════════════════════════════════════════════╕\033[0m"
+echo -e "\e[33m  ██╗  ██╗██╗  ██╗ █████╗ ██╗██╗   ██╗██████╗ ███╗   ██╗ \E[0m"
+echo -e "\e[33m  ██║ ██╔╝██║  ██║██╔══██╗██║██║   ██║██╔══██╗████╗  ██║ \E[0m"
+echo -e "\e[33m  █████╔╝ ███████║███████║██║██║   ██║██████╔╝██╔██╗ ██║ \E[0m"
+echo -e "\e[33m  ██╔═██╗ ██╔══██║██╔══██║██║╚██╗ ██╔╝██╔═══╝ ██║╚██╗██║ \E[0m"
+echo -e "\e[33m  ██║  ██╗██║  ██║██║  ██║██║ ╚████╔╝ ██║     ██║ ╚████║ \E[0m"
+echo -e "\e[33m  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝  ╚═╝     ╚═╝  ╚═══╝ \E[0m"
+echo -e "\e[31m╘════════════════════════════════════════════════════════╛\033[0m"
+
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;30m                 INFO SERVER               \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
-cekup=`uptime -p | grep -ow "day"`
 serverV=$( curl -sS https://raw.githubusercontent.com/KhaiVpn767/access/main/versi)
 
 if [ "$cekup" = "day" ]; then
-echo -e "System Uptime   :  $uphours $upminutes $uptimecek"
+echo -e " System Uptime   :  $uphours $upminutes $uptimecek"
 else
-echo -e "System Uptime   :  $uphours $upminutes"
+echo -e " System Uptime   : $uphours $upminutes"
 fi
-echo -e "Use Core        :  $rekk"
-echo -e "Current Domain  :  $(cat /etc/$bec/domain)"
-echo -e "IP-VPS          :  $(cat /etc/myipvps)"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "
- [\033[1;36m01\033[0m] • SSH & OVPN
- [\033[1;36m02\033[0m] • $rekk : VMess / VLess
- [\033[1;36m03\033[0m] • TROJAN-GFW & GO
- [\033[1;36m04\033[0m] • WIREGUARD
- [\033[1;36m05\033[0m] • SSTP
- [\033[1;36m06\033[0m] • L2TP / PPTP
- [\033[1;36m07\033[0m] • SHADOWSOCKS obfs/ssr
+echo -e " Ip Vps/Address  : $IPVPS"
+echo -e " Domain Name     : $(cat /etc/$bec/domain)"
+echo -e " Use Core        : $rekk"
+echo -e " Used RAM        : $uram MB"
+echo -e " Free RAM        : $fram MB"
+echo -e " CPU Usage       : $cpu_usage1 %"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e  "  \e[33m   Ssh/Ovpn       Vmess        Vless  "
+echo -e  " \e[33m       $total_ssh             $totalvm            $totalvl"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e  "\e[0;33m Traffic\e[0m     \e[0;35mToday     Yesterday    Month   "
+echo -e  "\e[0;35m Download\e[0m    $dtoday    $dyest     $dmon   \e[0m"
+echo -e  "\e[0;35m Upload\e[0m      $utoday    $uyest     $umon   \e[0m"
+echo -e  "\e[0;35m Total\e[0m     \033[0;36m  $ttoday    $tyest     $tmon  \e[0m "
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;30m                 Xray Menu                 \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
+echo -e " [\033[1;35m01\033[0m] • SSH & OVPN"
+echo -e " [\033[1;35m02\033[0m] • $rekk : VMess / VLess"
+echo -e " [\033[1;35m03\033[0m] • TROJAN-GFW & GO"
+echo -e " [\033[1;35m04\033[0m] • WIREGUARD"
+echo -e " [\033[1;35m05\033[0m] • SSTP"
+echo -e " [\033[1;35m06\033[0m] • L2TP / PPTP"
+echo -e " [\033[1;35m07\033[0m] • SHADOWSOCKS obfs/ssr"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m                System Menu                \e[0m"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
+echo -e " [\033[1;35m55\033[0m] • Trial Generator"
+echo -e " [\033[1;35m66\033[0m] • Logs User Created"
+echo -e " [\033[1;35m77\033[0m] • VPS Setting [ Menu ]"
+echo -e " [\033[1;35m88\033[0m] • Autokill Multi-login [ Menu ]"
+echo -e " [\033[1;35m99\033[0m] • ALL Information VPS[ Menu ]"
+echo -e ""
+echo -e " [\033[1;35m100\033[0m] • SYSTEM / Admin [ Menu ]"
+echo -e " [\033[1;35m700\033[0m] • Bot-Panel $sts"
 
- [\033[1;36m55\033[0m] • Trial Generator
- [\033[1;36m66\033[0m] • Logs User Created
- [\033[1;36m77\033[0m] • VPS Setting [ Menu ]
- [\033[1;36m88\033[0m] • Autokill Multi-login [ Menu ]
- [\033[1;36m99\033[0m] • ALL Information VPS[ Menu ]
-
- [\033[1;36m100\033[0m] • SYSTEM / Admin [ Menu ]
- [\033[1;36m700\033[0m] • Bot-Panel $sts
-"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
-echo -e "[\033[1;32m999\033[0m] • \033[0;31mUpdate Available ! Go choice 999 to update\033[0m"
+echo -e " [\033[0;35m999\033[0m] • \033[0;31mUpdate Available ! Go choice 999 to update\033[0m"
 echo ""
 fi
 echo -e "\033[1;37mPress [ Ctrl+C ] • To-Exit-Script\033[0m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
-echo -e "Version       :\033[1;36m $(cat /opt/.ver) Latest Version\e[0m"
-echo -e "Client Name   : $Name"
-echo -e "Expiry script : $Exp"
-rm -f /home/needupdate > /dev/null 2>&1
-else
-rm /dev/.permiss > /dev/null 2>&1
-touch /home/needupdate > /dev/null 2>&1
-echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+echo -e "  Version        :\033[1;36m Latest Version\e[0m"
+echo -e "  Client Name    : $Name"
+echo -e "  Expired Script : $Exp"
+echo -e "  \033[0;33mVersion        : Update available to $serverV\e[0m"
+echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
 echo ""
-echo -e "[ \033[0;31mChangelog\033[0m ]"
-curl -sS https://raw.githubusercontent.com/KhaiVpn767/vpn/main/clgshow
-echo -e "
-"
-fi
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo
 echo -ne "Select menu : "; read x
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     if [[ $x -eq 1 ]]; then
