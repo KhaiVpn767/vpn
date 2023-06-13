@@ -68,7 +68,7 @@ IP=$(curl -sS ifconfig.me);
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 echo -e "\e[36m╒═════════════════════════════════════════════╕\033[0m"
-echo -e "\E[0;41;30m           ⇱ Change Port OVPN ⇲           \E[0m"
+echo -e "  \E[0;41;30m           ⇱ Change Port OVPN ⇲           \E[0m"
 echo -e "\e[36m╘═════════════════════════════════════════════╛\033[0m"  
 echo ""
 echo -e "[\033[1;35m1\033[0m]  Change Port TCP $ovpn"
