@@ -67,9 +67,9 @@ sqd="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | head -
 sqd2="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | tail -n1)"
 echo -e "==========================="
 echo -e ""
-echo -e "[1]  Change Port $sqd"
-echo -e "[2]  Change Port $sqd2"
-echo -e "[x]  Exit"
+echo -e "[\033[1;35m1\033[0m]  Change Port $sqd"
+echo -e "[\033[1;35m2\033[0m]  Change Port $sqd2"
+echo -e "[\033[1;35mx\033[0m]  Exit"
 echo -e "==========================="
 echo -e ""
 read -p "Select From Options [1-2 or x] :  " prot
