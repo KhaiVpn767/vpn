@@ -66,7 +66,7 @@ fi
 clear
 do1=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 echo -e "\e[36m╒═════════════════════════════════════════════╕\033[0m"
-echo -e "\E[0;41;30m       ⇱ Change Port DO Websocket ⇲      \E[0m"
+echo -e "  \E[0;41;30m       ⇱ Change Port DO Websocket ⇲      \E[0m"
 echo -e "\e[36m╘═════════════════════════════════════════════╛\033[0m"  
 echo ""
 echo -e " Change Port $do1"
