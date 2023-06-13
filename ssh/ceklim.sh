@@ -65,9 +65,9 @@ exit 0
 fi
 
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m       ⇱ CEK USER MULTI SSH ⇲      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒══════════════════════════════════════╕\033[0m"
+echo -e "\E[0;41;30m       ⇱ CEK USER MULTI SSH ⇲     \E[0m"
+echo -e "\e[36m╘══════════════════════════════════════╛\033[0m"
 if [ -e "/root/log-limit.txt" ]; then
 echo "User Who Violate The Maximum Limit";
 echo "Time - Username - Number of Multilogin"
