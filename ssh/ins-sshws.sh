@@ -116,9 +116,9 @@ fi
 }
 
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m          ⇱ SSH WEBSOCKET ⇲          \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒════════════════════════════════════════╕\033[0m"
+echo -e "\E[0;41;30m          ⇱ SSH WEBSOCKET ⇲         \E[0m"
+echo -e "\e[36m╘════════════════════════════════════════╛\033[0m"
 echo ""
 echo -e " 1. Enable SSH Websocket"
 echo -e " 2. Disable SSh Websocket"
