@@ -117,7 +117,7 @@ fi
 
 clear
 echo -e "\e[36m╒════════════════════════════════════════╕\033[0m"
-echo -e "\E[0;41;31m          ⇱ SSH WEBSOCKET ⇲         \E[0m"
+echo -e " \E[0;41;31m          ⇱ SSH WEBSOCKET ⇲          \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════╛\033[0m"
 echo ""
 echo -e " 1. Enable SSH Websocket"
