@@ -65,9 +65,9 @@ fi
 
 clear
 do1=`cat ~/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m       ⇱ Change Port SSL Websocket ⇲      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
+echo -e "\033[0;34m╒═════════════════════════════════════════╕\033[0m"
+echo -e "\E[0;41;30m       ⇱ Change Port SSL Websocket ⇲     \E[0m"
+echo -e "\033[0;34m╘═════════════════════════════════════════╛\033[0m"  
 echo ""
 echo -e " Change Port $do1"
 echo ""
