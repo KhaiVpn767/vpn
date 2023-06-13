@@ -67,7 +67,7 @@ clear
 ssl="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $1}')"
 ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
 echo -e "\033[0;34m╒═════════════════════════════════════════╕\033[0m"
-echo -e "\E[0;41;30m           ⇱ Change Port SSL ⇲           \E[0m"
+echo -e "  \E[0;41;30m           ⇱ Change Port SSL ⇲           \E[0m"
 echo -e "\033[0;34m╘═════════════════════════════════════════╛\033[0m"  
 echo ""
 echo -e "[1]  Change Port $ssl"
