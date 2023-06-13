@@ -65,7 +65,7 @@ fi
 
 clear
 echo -e "\033[0;34m╒════════════════════════════════════════════════╕\033[0m"
-echo -e "\E[0;41;30m             ⇱ RESTART SSH SERVICE ⇲            \E[0m"
+echo -e "  \E[0;41;30m           ⇱ RESTART SSH SERVICE ⇲              \E[0m"
 echo -e "\033[0;34m╘════════════════════════════════════════════════╛\033[0m"
 echo -e ""
 echo -e "[1] Restart All Services"
