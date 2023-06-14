@@ -75,20 +75,20 @@ chck_pid(){
 
 while true $x != "ok"
 do
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                ⇱ WIREGUARD MENU ⇲                \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m       ⇱ WIREGUARD MENU ⇲          \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
 chck_pid
 echo -e "
-[\033[0;32m01\033[0m] • Create Wireguard Account
-[\033[0;32m02\033[0m] • Deleting Wireguard Account
-[\033[0;32m03\033[0m] • Cek User Login Wireguard
-[\033[0;32m04\033[0m] • Extending Wireguard Account Active Life
-[\033[0;32m05\033[0m] • Check Wireguard User Interface
+[\033[1;35m1\033[0m] • Create Wireguard Account
+[\033[1;35m02\033[0m] • Deleting Wireguard Account
+[\033[1;35m03\033[0m] • Cek User Login Wireguard
+[\033[1;35m04\033[0m] • Extending Wireguard Account Active Life
+[\033[1;35m05\033[0m] • Check Wireguard User Interface
 
-[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+[\033[1;35m00\033[0m] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
 
