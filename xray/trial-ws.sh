@@ -132,9 +132,9 @@ vmesslink2="vmess://$(base64 -w 0 /etc/xray/$WSTrial-none.json)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m      ⇱ Xray/Vmess Account ⇲      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;30m      ⇱ Xray/Vmess Account ⇲         \E[0m"
+echo -e "\e[36m╘═════════════════════════════════════╛\033[0m"
 echo -e "Remarks : ${WSTrial}"
 echo -e "Domain : ${domain}"
 echo -e "port TLS : ${tls}"
