@@ -103,7 +103,7 @@ PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
 echo -e "\033[0;34m╒══════════════════════════════════╕\033[0m"
-echo -e "  \E[0;41;30m        ⇱ TRIAL SSH ⇲             \E[0m"
+echo -e " \E[0;41;30m        ⇱ TRIAL SSH ⇲             \E[0m"
 echo -e "\033[0;34m╘══════════════════════════════════╛\033[0m"
 echo -e "Username : $Login"
 echo -e "Password : $Pass"
@@ -133,7 +133,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 else
 
 echo -e "\033[0;34m╒══════════════════════════════════╕\033[0m"
-echo -e "  \E[0;41;30m         ⇱ TRIAL SSH ⇲            \E[0m"
+echo -e " \E[0;41;30m         ⇱ TRIAL SSH ⇲            \E[0m"
 echo -e "\033[0;34m╘══════════════════════════════════╛\033[0m"
 echo -e "Username : $Login"
 echo -e "Password : $Pass"
