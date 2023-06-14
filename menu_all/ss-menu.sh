@@ -786,36 +786,36 @@ fi
 x="ok"
 while true $x != "ok"
 do
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m               ⇱ SHADOWSOCKS MENU ⇲               \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒══════════════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m               ⇱ SHADOWSOCKS MENU ⇲               \E[0m"
+echo -e "\e[36m╘══════════════════════════════════════════════════╛\033[0m"
 menu_sts
 echo -e "
-[\033[0;32m01\033[0m] • Create SS-Obfs Account
-[\033[0;32m02\033[0m] • Deleting SS-Obfs Account
-[\033[0;32m03\033[0m] • Extending SS-Obfs Account Active Life
-[\033[0;32m04\033[0m] • Check SS-Obfs User Login
+[\033[1;35m01\033[0m] • Create SS-Obfs Account
+[\033[1;35m02\033[0m] • Deleting SS-Obfs Account
+[\033[1;35m03\033[0m] • Extending SS-Obfs Account Active Life
+[\033[1;35m04\033[0m] • Check SS-Obfs User Login
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 menu_status
 echo -e "
-[\033[0;32m05\033[0m] • Create SS-R Account
-[\033[0;32m06\033[0m] • Deleting SS-R Account
-[\033[0;32m07\033[0m] • Extending SS-R Account Active Life
+[\033[1;35m05\033[0m] • Create SS-R Account
+[\033[1;35m06\033[0m] • Deleting SS-R Account
+[\033[1;35m07\033[0m] • Extending SS-R Account Active Life
 
-[\033[0;32m08\033[0m] • Check the account information SSR
-[\033[0;32m09\033[0m] • Display the connection information SSR
-[\033[0;32m10\033[0m] • Change Password User SSR
-[\033[0;32m11\033[0m] • Manually Modify User Configuration SSR
-[\033[0;32m12\033[0m] • Clear The Used Traffic SSR
-[\033[0;32m13\033[0m] • Start ShadowsocksR 
-[\033[0;32m14\033[0m] • Stop ShadowsocksR
-[\033[0;32m15\033[0m] • Restart ShadowsocksR
-[\033[0;32m16\033[0m] • Cek ShadowsocksR log
+[\033[1;35m08\033[0m] • Check the account information SSR
+[\033[1;35m09\033[0m] • Display the connection information SSR
+[\033[1;35m10\033[0m] • Change Password User SSR
+[\033[1;35m11\033[0m] • Manually Modify User Configuration SSR
+[\033[1;35m12\033[0m] • Clear The Used Traffic SSR
+[\033[1;35m13\033[0m] • Start ShadowsocksR 
+[\033[1;35m14\033[0m] • Stop ShadowsocksR
+[\033[1;35m15\033[0m] • Restart ShadowsocksR
+[\033[1;35m16\033[0m] • Cek ShadowsocksR log
 
-[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+[\033[1;35m00\033[0m] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
 
