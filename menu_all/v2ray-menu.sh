@@ -66,16 +66,16 @@ clear
 x="ok"
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                  ⇱ XRAY MENU ⇲                   \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒════════════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m                 ⇱ XRAY MENU ⇲                  \E[0m"
+echo -e "\e[36m╘════════════════════════════════════════════════╛\033[0m"
 
 rekk='XRAY'
 kjj='xray'
 else
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                  ⇱ V2RAY MENU ⇲                  \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒════════════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m                 ⇱ V2RAY MENU ⇲                 \E[0m"
+echo -e "\e[36m╘════════════════════════════════════════════════╛\033[0m"
 
 rekk='V2RAY'
 kjj='v2ray'
@@ -109,59 +109,59 @@ fi
 
 menu_sts
 echo -e "
-[\033[0;32m01\033[0m] • Create $rekk Vmess Websocket Account
-[\033[0;32m02\033[0m] • Deleting $rekk Vmess Websocket Account
-[\033[0;32m03\033[0m] • Extending $rekk Vmess Account Active Life
-[\033[0;32m04\033[0m] • Check User Login $rekk
+[\033[1;35m01\033[0m] • Create $rekk Vmess Websocket Account
+[\033[1;35m02\033[0m] • Deleting $rekk Vmess Websocket Account
+[\033[1;35m03\033[0m] • Extending $rekk Vmess Account Active Life
+[\033[1;35m04\033[0m] • Check User Login $rekk
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
 
-[\033[0;32m05\033[0m] • Create $rekk Vless Websocket Account
-[\033[0;32m06\033[0m] • Deleting $rekk Vless Websocket Account
-[\033[0;32m07\033[0m] • Extending $rekk Vless Account Active Life
-[\033[0;32m08\033[0m] • Check User Login $rekk
+[\033[1;35m05\033[0m] • Create $rekk Vless Websocket Account
+[\033[1;35m06\033[0m] • Deleting $rekk Vless Websocket Account
+[\033[1;35m07\033[0m] • Extending $rekk Vless Account Active Life
+[\033[1;35m08\033[0m] • Check User Login $rekk
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
 
-[\033[0;32m09\033[0m] • Create Vless TCP XTLS Account
-[\033[0;32m10\033[0m] • Deleting Vless TCP XTLS Account
-[\033[0;32m11\033[0m] • Extending Vless TCP XTLS Account
-[\033[0;32m12\033[0m] • Chek User Login XTLS"
+[\033[1;35m09\033[0m] • Create Vless TCP XTLS Account
+[\033[1;35m10\033[0m] • Deleting Vless TCP XTLS Account
+[\033[1;35m11\033[0m] • Extending Vless TCP XTLS Account
+[\033[1;35m12\033[0m] • Chek User Login XTLS"
 if [[ "$rekk" = "V2RAY" ]]; then
 echo -e "
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
 
-[\033[0;32m13\033[0m] • Create VMess Grpc Account
-[\033[0;32m14\033[0m] • Deleting Vless Grpc Account
-[\033[0;32m15\033[0m] • Extending Vless Grpc Account
-[\033[0;32m16\033[0m] • Chek User Login Grpc"
+[\033[1;35m13\033[0m] • Create VMess Grpc Account
+[\033[1;35m14\033[0m] • Deleting Vless Grpc Account
+[\033[1;35m15\033[0m] • Extending Vless Grpc Account
+[\033[1;35m16\033[0m] • Chek User Login Grpc"
 elif [[ "$rekk" = "XRAY" ]]; then
 echo -e "
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
 
-[\033[0;32m21\033[0m] • Create VMess Grpc Account
-[\033[0;32m22\033[0m] • Deleting VMess Grpc Account
-[\033[0;32m23\033[0m] • Extending VMess Grpc Account
-[\033[0;32m24\033[0m] • Chek User Login Grpc
+[\033[1;35m21\033[0m] • Create VMess Grpc Account
+[\033[1;35m22\033[0m] • Deleting VMess Grpc Account
+[\033[1;35m23\033[0m] • Extending VMess Grpc Account
+[\033[1;35m24\033[0m] • Chek User Login Grpc
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
 
-[\033[0;32m25\033[0m] • Create Vless Grpc Account
-[\033[0;32m26\033[0m] • Deleting Vless Grpc Account
-[\033[0;32m27\033[0m] • Extending Vless Grpc Account
-[\033[0;32m28\033[0m] • Chek User Login Grpc
+[\033[1;35m25\033[0m] • Create Vless Grpc Account
+[\033[1;35m26\033[0m] • Deleting Vless Grpc Account
+[\033[1;35m27\033[0m] • Extending Vless Grpc Account
+[\033[1;35m28\033[0m] • Chek User Login Grpc
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
 
-[\033[0;32m29\033[0m] • Create Trojan Grpc Account
-[\033[0;32m30\033[0m] • Deleting Trojan Grpc Account
-[\033[0;32m31\033[0m] • Extending Trojan Grpc Account
-[\033[0;32m32\033[0m] • Chek User Login Grpc"
+[\033[1;35m29\033[0m] • Create Trojan Grpc Account
+[\033[1;35m30\033[0m] • Deleting Trojan Grpc Account
+[\033[1;35m31\033[0m] • Extending Trojan Grpc Account
+[\033[1;35m32\033[0m] • Chek User Login Grpc"
 fi
 echo -e "
-[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+[\033[1;35m00\033[0m] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
 
