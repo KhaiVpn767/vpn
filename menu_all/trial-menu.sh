@@ -64,27 +64,27 @@ clear
 
 
 x="ok"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m             ⇱ TRIAL MENU GENERATOR ⇲             \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒══════════════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m             ⇱ TRIAL MENU GENERATOR ⇲             \E[0m"
+echo -e "\e[36m╘══════════════════════════════════════════════════╛\033[0m"
 echo -e "\033[1;37mNB: Trial account will not logged into create log user\033[0m
 \033[1;32mTrial-Generator\033[0m :
 
-[\033[0;32m01\033[0m] • Generate Trial SSH & OpenVPN
-[\033[0;32m02\033[0m] • Generate Trial Wireguard
-[\033[0;32m03\033[0m] • Generate Trial L2TP
-[\033[0;32m04\033[0m] • Generate Trial PPTP
-[\033[0;32m05\033[0m] • Generate Trial SSTP
-[\033[0;32m06\033[0m] • Generate Trial Shadowsocks-R
-[\033[0;32m07\033[0m] • Generate Trial Shadowsocks
-[\033[0;32m08\033[0m] • Generate Trial Vmess
-[\033[0;32m09\033[0m] • Generate Trial VLESS
-[\033[0;32m10\033[0m] • Generate Trial Trojan-GFW
-[\033[0;32m11\033[0m] • Generate Trial Trojan-GO
+[\033[1;35m01\033[0m] • Generate Trial SSH & OpenVPN
+[\033[1;35m02\033[0m] • Generate Trial Wireguard
+[\033[1;35m03\033[0m] • Generate Trial L2TP
+[\033[1;35m04\033[0m] • Generate Trial PPTP
+[\033[1;35m05\033[0m] • Generate Trial SSTP
+[\033[1;35m06\033[0m] • Generate Trial Shadowsocks-R
+[\033[1;35m07\033[0m] • Generate Trial Shadowsocks
+[\033[1;35m08\033[0m] • Generate Trial Vmess
+[\033[1;35m09\033[0m] • Generate Trial VLESS
+[\033[1;35m10\033[0m] • Generate Trial Trojan-GFW
+[\033[1;35m11\033[0m] • Generate Trial Trojan-GO
 
-[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+[\033[1;35m00\033[0m] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
 
