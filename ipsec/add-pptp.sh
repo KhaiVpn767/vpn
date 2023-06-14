@@ -70,18 +70,18 @@ PUBLIC_IP=$(curl -sS ifconfig.me);
 else
 PUBLIC_IP=$IP
 fi
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
-echo -e "\E[44;1;39m          ⇱ PPTP ACCOUNT ⇲         \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"		
+echo -e " \e[0;41;30m          ⇱ PPTP ACCOUNT ⇲         \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"		
 
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username: " -e VPN_USER
 		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/scrz-prem/data-user-pptp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
-echo -e "\E[44;1;39m          ⇱ PPTP ACCOUNT ⇲         \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"		
+echo -e " \e[0;41;30m          ⇱ PPTP ACCOUNT ⇲         \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"		
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
@@ -104,16 +104,16 @@ EOF
 chmod 600 /etc/ppp/chap-secrets*
 echo -e "### $VPN_USER $exp">>"/var/lib/scrz-prem/data-user-pptp"
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[44;1;39m          ⇱ PPTP ACCOUNT ⇲         \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m" | tee -a /etc/log-create-user.log
+echo -e " \e[0;41;30m          ⇱ PPTP ACCOUNT ⇲         \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 echo -e "Server IP : $PUBLIC_IP" | tee -a /etc/log-create-user.log
 echo -e "Username : $VPN_USER" | tee -a /etc/log-create-user.log
 echo -e "Password : $VPN_PASSWORD" | tee -a /etc/log-create-user.log
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 
