@@ -97,9 +97,9 @@ vlesslink1="vless://${uuid}@${domain}:$tls?path=/vlessws&security=tls&encryption
 vlesslink2="vless://${uuid}@${domain}:$none?path=/vlessws&encryption=none&type=ws#${VLESSTrial}"
 systemctl restart xray
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m      ⇱ Xray/Vless Account ⇲      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;30m      ⇱ Xray/Vless Account ⇲         \E[0m"
+echo -e "\e[36m╘═════════════════════════════════════╛\033[0m"
 echo -e "Remarks : ${VLESSTrial}"
 echo -e "Domain : ${domain}"
 echo -e "port TLS : $tls"
