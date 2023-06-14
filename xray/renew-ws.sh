@@ -82,8 +82,8 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 
 	clear
 	echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
-    echo -e " \E[0;41;30m          ⇱ Renew Vmess ⇲          \E[0m"
-    echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
+        echo -e " \E[0;41;30m          ⇱ Renew Vmess ⇲          \E[0m"
+        echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
     echo ""
   	grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
     echo ""
