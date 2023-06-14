@@ -173,9 +173,9 @@ sed -i '/#vlessXTLS$/a\#& '"$user $exp"'\
 vlessTcpXtls="$jenis"
 systemctl restart xtls
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[44;1;39m       ⇱ Add VLess TCP XTLS ⇲      \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m" | tee -a /etc/log-create-user.log
+echo -e " \e[0;41;30m       ⇱ Add VLess TCP XTLS ⇲      \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
 echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Domain : ${domain}" | tee -a /etc/log-create-user.log
@@ -184,9 +184,9 @@ echo -e "Id : ${uuid}" | tee -a /etc/log-create-user.log
 echo -e "Encryption : none" | tee -a /etc/log-create-user.log
 echo -e "Network : tcp" | tee -a /etc/log-create-user.log
 echo -e "Flow : $xCho" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link XTLS : ${vlessTcpXtls}" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 
