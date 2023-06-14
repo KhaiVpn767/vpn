@@ -66,11 +66,11 @@ fi
 
 clear
 prtt="$(cat /root/log-install.txt | grep -w "XRAY  Vmess Grpc" | cut -d: -f2|sed 's/ //g')"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m     ⇱ Change Port Vmess Grpc ⇲    \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m     ⇱ Change Port Vmess Grpc ⇲    \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
 echo -e "      Change Port $prtt"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -p "New Port Vmess Grpc: " prtt2
 if [ -z $prtt2 ]; then
 echo "Please Input Port"
