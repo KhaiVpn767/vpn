@@ -115,51 +115,51 @@ setting-menu
 while true $x != "ok"
 do
 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                ⇱ SETTINGS  MENU ⇲                \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\033[1;33mSettings\033[0m :
+echo -e "\e[36m╒══════════════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m                ⇱ SETTINGS  MENU ⇲                \E[0m"
+echo -e "\e[36m╘══════════════════════════════════════════════════╛\033[0m"
+echo -e "\033[1;35mSettings\033[0m :
 
-[\033[0;32m01\033[0m] • Add/Change VPS Host Subdomain
-[\033[0;32m02\033[0m] • Add Subdomain to Cloudflare
-[\033[0;32m03\033[0m] • Add Pointing Bug
-[\033[0;32m04\033[0m] • Renew Certificate $kjj
-[\033[0;32m05\033[0m] • Change Banner VPS
-[\033[0;32m06\033[0m] • Change VPS Auto Reboot Time
-[\033[0;32m07\033[0m] • Limit Bandwidth Speed Server
-[\033[0;32m100\033[0m] • Restart All Service
-[\033[0;32m101\033[0m] • Disable Torrent $sts
-[\033[0;32m102\033[0m] • Ram Cache Cleaner
-[\033[0;32m111\033[0m] • SETUP TELCO BUG
+[\033[1;35m01\033[0m] • Add/Change VPS Host Subdomain
+[\033[1;35m02\033[0m] • Add Subdomain to Cloudflare
+[\033[1;35m03\033[0m] • Add Pointing Bug
+[\033[1;35m04\033[0m] • Renew Certificate $kjj
+[\033[1;35m05\033[0m] • Change Banner VPS
+[\033[1;35m06\033[0m] • Change VPS Auto Reboot Time
+[\033[1;35m07\033[0m] • Limit Bandwidth Speed Server
+[\033[1;35m100\033[0m] • Restart All Service
+[\033[1;35m101\033[0m] • Disable Torrent $sts
+[\033[1;35m102\033[0m] • Ram Cache Cleaner
+[\033[1;35m111\033[0m] • SETUP TELCO BUG
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\033[1;33mChange-Port\033[0m :
+\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[1;35mChange-Port\033[0m :
 
-[\033[0;32m08\033[0m] • Change Port Stunnel4
-[\033[0;32m09\033[0m] • Change Port OpenVPN
-[\033[0;32m10\033[0m] • Change Port Wireguard
-[\033[0;32m11\033[0m] • Change Port Vmess
-[\033[0;32m12\033[0m] • Change Port Trojan
-[\033[0;32m13\033[0m] • Change Port Trojan-GO
-[\033[0;32m14\033[0m] • Change Port Squid
-[\033[0;32m15\033[0m] • Change Port SSTP
-[\033[0;32m16\033[0m] • Change Port SHDO WS
-[\033[0;32m17\033[0m] • Change Port SHSSL WS
-[\033[0;32m18\033[0m] • Change Port OHP
-[\033[0;32m19\033[0m] • Change Port VlessXTLs
-[\033[0;32m20\033[0m] • Change Port Vless"
+[\033[1;35m08\033[0m] • Change Port Stunnel4
+[\033[1;35m09\033[0m] • Change Port OpenVPN
+[\033[1;35m10\033[0m] • Change Port Wireguard
+[\033[1;35m11\033[0m] • Change Port Vmess
+[\033[1;35m12\033[0m] • Change Port Trojan
+[\033[1;35m13\033[0m] • Change Port Trojan-GO
+[\033[1;35m14\033[0m] • Change Port Squid
+[\033[1;35m15\033[0m] • Change Port SSTP
+[\033[1;35m16\033[0m] • Change Port SHDO WS
+[\033[1;35m17\033[0m] • Change Port SHSSL WS
+[\033[1;35m18\033[0m] • Change Port OHP
+[\033[1;35m19\033[0m] • Change Port VlessXTLs
+[\033[1;35m20\033[0m] • Change Port Vless"
 if [ "$cekray" = "XRAY" ]; then
-echo -e "[\033[0;32m22\033[0m] • Change Port VmessGrpc
-[\033[0;32m23\033[0m] • Change Port VlessGrpc
-[\033[0;32m24\033[0m] • Change Port TrojanGrpc"
+echo -e "[\033[1;35m22\033[0m] • Change Port VmessGrpc
+[\033[1;35m23\033[0m] • Change Port VlessGrpc
+[\033[1;35m24\033[0m] • Change Port TrojanGrpc"
 echo -e ""
 else
-echo -e "[\033[0;32m21\033[0m] • Change Port VmessGrpc"
+echo -e "[\033[1;35m21\033[0m] • Change Port VmessGrpc"
 echo ""
 fi
-echo -e "[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+echo -e "[\033[1;35m00\033[0m] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
 
