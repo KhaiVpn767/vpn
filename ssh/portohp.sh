@@ -67,9 +67,9 @@ clear
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
-echo -e "\e[36m╒═════════════════════════════════════════════╕\033[0m"
-echo -e "  \E[0;41;30m         ⇱ Change Port OHP ⇲             \E[0m"
-echo -e "\e[36m╘═════════════════════════════════════════════╛\033[0m"  
+echo -e "\e[36m╒═════════════════════════════════════════╕\033[0m"
+echo -e " \E[0;41;30m         ⇱ Change Port OHP ⇲             \E[0m"
+echo -e "\e[36m╘═════════════════════════════════════════╛\033[0m"  
 echo ""
 echo -e "[\033[1;35m1\033[0m]  Change Port OHP SSH $OhpSSH"
 echo -e "[\033[1;35m2\033[0m]  Change Port OHP Dropbear $OhpDB"
