@@ -62,7 +62,7 @@ fi
 
 clear
 echo -e "\e[36m╒═════════════════════════════════════════════╕\033[0m"
-echo -e "  \E[0;41;30m           ⇱ DELETE USER ⇲               \E[0m"
+echo -e "\E[0;41;30m           ⇱ DELETE USER ⇲                  \E[0m"
 echo -e "\e[36m╘═════════════════════════════════════════════╛\033[0m"  
 echo ""
 read -p "Username SSH to Delete : " Pengguna
