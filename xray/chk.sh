@@ -68,9 +68,9 @@ clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xtls/config.json | grep '^#&' | cut -d ' ' -f 2 | sort | uniq`);
 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m     ⇱ Vless XTLS User Login ⇲     \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m     ⇱ Vless XTLS User Login ⇲     \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
 
 for akun in "${data[@]}"
 do
@@ -97,7 +97,7 @@ else
 jum2=$(cat /tmp/ipvless.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 fi
 rm -rf /tmp/ipvmess.txt
 done
