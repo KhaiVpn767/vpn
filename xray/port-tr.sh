@@ -66,11 +66,11 @@ fi
 
 clear
 tr="$(cat ~/log-install.txt | grep -w "Trojan " | cut -d: -f2|sed 's/ //g')"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m       ⇱ Change Port Trojan ⇲      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m       ⇱ Change Port Trojan ⇲      \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
 echo -e "      Change Port $tr"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -p "New Port Trojan: " tr2
 if [ -z $tr2 ]; then
 echo "Please Input Port"
