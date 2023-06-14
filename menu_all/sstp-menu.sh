@@ -75,19 +75,19 @@ chck_pid(){
 while true $x != "ok"
 do
 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                 ⇱ SSTP MENU ⇲                    \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\e[36m╒══════════════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m                 ⇱ SSTP MENU ⇲                    \E[0m"
+echo -e "\e[36m╘══════════════════════════════════════════════════╛\033[0m"
 chck_pid
 echo -e "
-[\033[0;32m01\033[0m] • Create Account SSTP
-[\033[0;32m02\033[0m] • Delete SSTP Account
-[\033[0;32m03\033[0m] • Extending SSTP Account Active Life
-[\033[0;32m04\033[0m] • Check User Login SSTP
+[\033[1;35m01\033[0m] • Create Account SSTP
+[\033[1;35m02\033[0m] • Delete SSTP Account
+[\033[1;35m03\033[0m] • Extending SSTP Account Active Life
+[\033[1;35m04\033[0m] • Check User Login SSTP
 
-[00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+[\033[1;35m00\033[0m] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -ne "Select menu : "; read x
 
