@@ -69,27 +69,27 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/trojangrpc.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
-        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\E[44;1;39m          ⇱ Renew Trojan ⇲         \E[0m"
-        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
+        echo -e " \e[0;41;30m          ⇱ Renew Trojan ⇲         \E[0m"
+        echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
 		echo ""
 		echo "You have no existing clients!"
 		echo ""
-		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo ""
         read -n 1 -s -r -p "Press any key to back on menu"
         v2ray-menu
 	fi
 
 	clear
-	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\E[44;1;39m          ⇱ Renew Trojan ⇲         \E[0m"
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
+    echo -e " \e[0;41;30m          ⇱ Renew Trojan ⇲         \E[0m"
+    echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
     echo ""
   	grep -E "^### " "/etc/xray/trojangrpc.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
     echo ""
     red "tap enter to go back"
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	read -rp "Input Username : " user
     if [ -z $user ]; then
     v2ray-menu
@@ -105,14 +105,14 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/trojangrpc.json")
     sed -i "/### $user/c\### $user $exp4" /etc/xray/trojangrpc.json
     systemctl restart trojan-grpc.service > /dev/null 2>&1
     clear
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo " VLESS Account Was Successfully Renewed"
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo ""
     echo " Client Name : $user"
     echo " Expired On  : $exp4"
     echo ""
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
     v2ray-menu
