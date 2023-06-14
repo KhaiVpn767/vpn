@@ -69,9 +69,9 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/usr/local/etc/xtls/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
-        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-        echo -e "\E[44;1;39m       ⇱ Renew Vless XTLS ⇲        \E[0m"
-        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo -e "\e[36m╒══════════════════════════════════╕\033[0m"
+        echo -e " \E[0;41;30m        ⇱ Renew Vless XTLS ⇲      \E[0m"
+        echo -e "\e[36m╘══════════════════════════════════╛\033[0m"
 		echo ""
 		echo "You have no existing clients!"
 		echo ""
@@ -82,9 +82,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/usr/local/etc/xtls/config.json")
 	fi
 
 	clear
-	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\E[44;1;39m       ⇱ Renew Vless XTLS ⇲        \E[0m"
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"
+    echo -e " \E[0;41;30m       ⇱ Renew Vless XTLS ⇲        \E[0m"
+    echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"
     echo ""
   	grep -E "^#& " "/usr/local/etc/xtls/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
     echo ""
@@ -105,9 +105,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/usr/local/etc/xtls/config.json")
     sed -i "/#& $user/c\#& $user $exp4" /usr/local/etc/xtls/config.json
     systemctl restart xtls > /dev/null 2>&1
     clear
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo " VLESS Account Was Successfully Renewed"
-    echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo -e "\e[36m╒═══════════════════════════════════════════╕\033[0m"
+    echo "   VLESS Account Was Successfully Renewed"
+    echo -e "\e[36m╘═══════════════════════════════════════════╛\033[0m"
     echo ""
     echo " Client Name : $user"
     echo " Expired On  : $exp4"
