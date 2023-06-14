@@ -97,16 +97,16 @@ EOF
 chmod 600 /etc/ppp/chap-secrets*
 echo -e "### $PPTPTrial $exp">>"/var/lib/scrz-prem/data-user-pptp"
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
-echo -e "\E[44;1;39m       ⇱ Trial PPTP Account ⇲      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
+echo -e "\e[36m╒═══════════════════════════════════╕\033[0m"		
+echo -e " \e[0;41;30m       ⇱ Trial PPTP Account ⇲      \E[0m"
+echo -e "\e[36m╘═══════════════════════════════════╛\033[0m"		
 echo -e ""
 echo -e "Server IP : $PUBLIC_IP"
 echo -e "Username : $PPTPTrial"
 echo -e "Password : $Passss"
 echo -e "Expired On : $exp"
 echo -e ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"		
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 
