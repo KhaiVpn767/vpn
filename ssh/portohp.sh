@@ -67,16 +67,16 @@ clear
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m           ⇱ Change Port OHP ⇲            \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
+echo -e "\e[36m╒══════════════════════════════════════════════════╕\033[0m"
+echo -e " \e[0;41;30m           ⇱ Change Port OHP ⇲                    \E[0m"
+echo -e "\e[36m╘══════════════════════════════════════════════════╛\033[0m"  
 echo ""
 echo -e "[1]  Change Port OHP SSH $OhpSSH"
 echo -e "[2]  Change Port OHP Dropbear $OhpDB"
 echo -e "[3]  Change Port OHP OVPN $OhpOVPN"
 echo -e "[x]  Exit"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
+echo -e "\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"  
 echo -e ""
 read -p "Select From Options [1-2 or x] :  " prot
 echo -e ""
